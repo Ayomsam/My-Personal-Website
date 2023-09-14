@@ -1,0 +1,598 @@
+    <!DOCTYPE html><!--[if lt IE 7]><html class="ie6 ie"><![endif]--><!--[if IE 7]><html class="ie7 ie"><![endif]--><!--[if IE 8]><html class="ie8 ie"><![endif]--><!--[if IE 9]><html class="ie9 ie"><![endif]--><html lang="en" itemscope="" itemtype="https://schema.org/WebPage"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],s=[],r=!0,a=function(e,i,n,o,s,r,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,c=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=s,this.deleteWhenComplete=r,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),c.isInitialized=!0,c.isComplete=!0,f("... func.apply: "+e);var i=c.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[c.funcName]),null!=n&&n.apply(null,this.parameters),!0===c.deleteWhenComplete&&delete t[e],!0===c.isBlock&&(f("----- F'D: "+c.name),u())}},l=function(e,i,t,n,o,s,r){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=s,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=r,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===s&&(t.defer=!0),t.onerror=function(){f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=r&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(s))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,r,a,c,h,f,u){var m=new l(e,i,n,r,a,c,h,u);!0===f?o[e]=m:s[e]=m,t[e]=m,d(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=n,t[e]=n,d(n)},addFunc:function(e,n,r,l,c,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var y=new a(e,n,r,l,c,f,u,p);!0===m?o[e]=y:s[e]=y,t[e]=y,d(y)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=o,t[e]=o,d(o)},items:t,processAll:u,setallowLoad:function(e){r=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};</script>
+        <script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('fads.js', '/porpoiseant/fads.js?gcb=195-0&cb=8', true, [], true, false, false, true);</script>
+        <script>var __ezaps=[{"slotID":"div-gpt-ad-computerhope_com-medrectangle-2-0","divID":"","slotName":"/1254144,5841173/computerhope_com-medrectangle-2","sizes":[[728,90]]},{"slotID":"div-gpt-ad-computerhope_com-medrectangle-1-0","divID":"","slotName":"/1254144,5841173/computerhope_com-medrectangle-1","sizes":[[300,250]]},{"slotID":"div-gpt-ad-computerhope_com-medrectangle-1-0_1","divID":"","slotName":"/1254144,5841173/computerhope_com-medrectangle-1","sizes":[[300,250]]},{"slotID":"div-gpt-ad-computerhope_com-medrectangle-1-0_2","divID":"","slotName":"/1254144,5841173/computerhope_com-medrectangle-1","sizes":[[300,250]]}];var __ezapsVideo=[];__ezapid='aa05931b-5308-4ea3-95a2-adf84f4ffde4';</script>
+        <script data-ezscrex="false" async data-pagespeed-no-defer type="text/javascript" src="/edmontonalberta/calgary.js?cb=16"></script>
+        <script>window.ezslots_raw=[];var __sellerid='c5a3a3b432dfb9135508bf6e4fdbab10';var __schain_domain='';var __ez_nid ='1254144';__advertiserRule=[''];var ezasVars = {'cid':'7530692077','pid':'pub-3999293766533555','ssid':44};if(typeof window.ezAutoAdsSetup == 'undefined'){window.google_reactive_ads_global_state = {
+                        adCount: {},
+                        floatingAdsStacking: { maxZIndexListeners: [], maxZIndexRestrictions: {}, nextRestrictionId: 0 },
+                        messageValidationEnabled: false,
+                        reactiveTypeDisabledByPublisher: {},
+                        reactiveTypeEnabledInAsfe: {},
+                        sideRailAvailableSpace: [],
+                        sideRailOverlappableElements: [],
+                        stateForType: {},
+                        tagSpecificState: {},
+                        wasPlaTagProcessed: true,
+                        wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+                        wasReactiveAdVisible: {},
+                        wasReactiveTagRequestSent: true,
+                        description: "Can't disable auto ads programmatically on the page, so here we are!"
+                    };};var __ezasAggressive=true;!function(){window.ezasvEvent=function(e,t){if(!0===e[0].isIntersecting){var i=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);window.ezoSTPixelAdd(i,"viewed",1),t.disconnect()}},window.ezaslEvent=function(e,t){if(void 0!==e[0].target.attributes["data-ad-status"]){var i=e[0].target.attributes["data-ad-status"].value,o=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);"filled"==i&&(window.ezoSTPixelAdd(o,"loaded",1),new IntersectionObserver(window.ezasvEvent,{threshold:[1]}).observe(document.getElementById(o+"-asloaded"))),"unfilled"==i&&setTimeout((function(){window.ezoAdBackFill(e)}),2e3),t.disconnect()}},window.ezoAdBackFill=function(e){var t=e[0].target,i=t.parentElement;t.style.display="none !important";var o,d=ezoGetSlotNum(i.id);if(o=void 0!==__ez.fads?__ez.fads.initslots[i.id]:__ez_fad_initslot[i.id],void 0===d&&"function"==typeof o&&(d=o(6)),void 0!==d)var n=window[d];if(void 0!==n){n.setTargeting("compid","0"),n.setTargeting("bkfl","1"),n.setTargeting("reft","t");var a=n.getTargeting("br2")[0];void 0!==window.ezoibfh&&void 0!==window.ezoibfh[a]&&(n.setTargeting("br1",a),n.setTargeting("eb_br",window.ezoibfh[a])),googletag.display(n),setTimeout((function(){googletag.pubads().refresh([n])}),500)}},window.ezoSTPixels=[];var e=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots&&window.ezslots_raw.length>0&&(window.ezoSTPixelFire(),clearInterval(e))}),250);window.ezoSTPixelAdd=function(e,t,i){window.ezoSTPixels.push({id:e,name:t,value:i}),window.ezoSTPixelFire()},window.ezoGetSlotById=function(e){var t=e.split("div-gpt-ad-")[1].split("-",3).join("-");for(var i in window.ezslots_raw)if(window.ezslots_raw[i].tap.includes(t))return window.ezslots_raw[i]},window.ezoGetSlotNum=function(e){if(void 0!==window.ezslots&&0!=window.ezslots)for(var t=0;t<window.ezslots.length;t++){var i=window[ezslots[t]];if(void 0!==i){var o=i.getSlotElementId();if(void 0!==o&&o==e)return ezslots[t]}}},window.ezoSTPixelFire=function(){if("undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots)for(;window.ezoSTPixels.length>0;){var e=window.ezoSTPixels.shift(),t=window.ezoGetSlotById(e.id);if(void 0===t){var i;if(i=void 0!==__ez.fads?__ez.fads.initslots[e.id]:__ez_fad_initslot[e.id],void 0===googletag.defineSlot)return void window.ezoSTPixels.push(e);if(i(1),void 0===(t=window.ezoGetSlotById(e.id)))return void window.ezoSTPixels.push(e)}var o=[{type:"impression",impression_id:t.eid,domain_id:window.did.toString(),unit:e.id,t_epoch:__ez.dot.getEpoch(0),ad_position:parseInt(t.ap),country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:1,data:__ez.dot.dataToStr([new __ezDotData(e.name,e.value.toString())]),is_orig:0}],d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig=0&sts="+btoa(JSON.stringify(o));__ez.dot.Fire(d)}}}();</script>
+        <script>!function(){var e=setInterval((function(){var t=document.querySelectorAll('[id^="outbrain_widget_"]');0!==t.length&&(function(e){e.forEach((function(e){if(e.parentElement.hasAttribute("data-ez-name")){var t=e.parentElement.attributes["data-ez-name"].value;new IntersectionObserver((function(e,i){e[0].isIntersecting&&(n({unit:t,name:"viewed"}),i.disconnect())}),{threshold:[1]}).observe(e);var i=e.attributes["data-widget-id"].value;window.OBREvents=window.OBREvents||[],OBREvents.push({event:"widgetDataReturned",widgetId:i,func:function(){n({unit:t,name:"loaded"})}})}}))}(t),clearInterval(e))}),250),t=[],i=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData&&(o(),clearInterval(i))}),2500);function n(e){t.push(e),o()}var d="/porpoiseant/army.gif";function o(){var e,i;if(0!==t.length&&"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData)for(;t.length>0;){var n=t.shift(),o=(e=n.unit,i=n.name,[{type:"impression",impression_id:_ezim_d[e].full_id.split("/")[2],domain_id:window.did.toString(),unit:e,t_epoch:__ez.dot.getEpoch(0),ad_position:_ezim_d[e].position_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:2,data:__ez.dot.dataToStr([new __ezDotData(i,"1")]),is_orig:0}]),a=__ez.dot.getURL(d)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(o));void 0!==window.ezWp&&ezWp&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("visit_uuid")&&(a+="&visit_uuid="+window.visit_uuid),__ez.dot.Fire(a)}}}();</script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+        <script>window.ezhbopt=true;</script>
+        <script>window.ezpbCache=true;</script>
+        <link href="//ad.doubleclick.net" rel="dns-prefetch">
+        <link href="//pagead2.googlesyndication.com" rel="dns-prefetch">
+        <link href="//googleads.g.doubleclick.net" rel="dns-prefetch">
+        <link href="//tpc.googlesyndication.com" rel="dns-prefetch">
+        <link href="//adservice.google.com" rel="dns-prefetch">
+        <link href="//secureads.g.doubleclick.net" rel="dns-prefetch">
+        <link href="//www.googletagservices.com" rel="dns-prefetch">
+        <link rel='preload' as='script' href='//securepubads.g.doubleclick.net/tag/js/gpt.js'>
+        <link rel='preload' as='script' href='//go.ezodn.com/hb/dall.js?cb=195-0-55' onerror="window.ezDallErr=true">
+        <link rel='preload' as='script' href='/porpoiseant/fads.js?gcb=195-0&cb=8'>
+        <script type="text/javascript">
+            var __banger_pmp_deals=function(){var d={17:{"DealId":17,"Floor":160},18:{"DealId":18,"Floor":25},19:{"DealId":19,"Floor":100},20:{"DealId":20,"Floor":300},1428:{"DealId":1428,"Floor":25},2310:{"DealId":2310,"Floor":400},2339:{"DealId":2339,"Floor":800},2351:{"DealId":2351,"Floor":155},2526:{"DealId":2526,"Floor":300},2527:{"DealId":2527,"Floor":300},2610:{"DealId":2610,"Floor":125},2688:{"DealId":2688,"Floor":100},2693:{"DealId":2693,"Floor":50},2761:{"DealId":2761,"Floor":200},2763:{"DealId":2763,"Floor":250},2764:{"DealId":2764,"Floor":325},2765:{"DealId":2765,"Floor":400},3044:{"DealId":3044,"Floor":175},3045:{"DealId":3045,"Floor":75},3052:{"DealId":3052,"Floor":20},3053:{"DealId":3053,"Floor":37},3054:{"DealId":3054,"Floor":555},3154:{"DealId":3154,"Floor":275},3455:{"DealId":3455,"Floor":475},3456:{"DealId":3456,"Floor":525},3457:{"DealId":3457,"Floor":600},3682:{"DealId":3682,"Floor":650},3684:{"DealId":3684,"Floor":375},3856:{"DealId":3856,"Floor":15},4184:{"DealId":4184,"Floor":425},4185:{"DealId":4185,"Floor":700},4186:{"DealId":4186,"Floor":900},4276:{"DealId":4276,"Floor":65},7:{"DealId":7,"Floor":150},8:{"DealId":8,"Floor":200},9:{"DealId":9,"Floor":300},10:{"DealId":10,"Floor":400},11:{"DealId":11,"Floor":500},12:{"DealId":12,"Floor":600},13:{"DealId":13,"Floor":700},14:{"DealId":14,"Floor":800},916:{"DealId":916,"Floor":95},915:{"DealId":915,"Floor":150},874:{"DealId":874,"Floor":200},835:{"DealId":835,"Floor":200},3683:{"DealId":3683,"Floor":1000},15:{"DealId":15,"Floor":1000}};return[{"SlotName":"/1254144,5841173/computerhope_com-medrectangle-1","Deals":[d[17],d[18],d[19],d[20],d[1428],d[2310],d[2339],d[2351],d[2526],d[2527],d[2610],d[2688],d[2693],d[2761],d[2763],d[2764],d[2765],d[3044],d[3045],d[3052],d[3053],d[3054],d[3154],d[3455],d[3456],d[3457],d[3682],d[3684],d[3856],d[4184],d[4185],d[4186],d[4276],d[7],d[8],d[9],d[10],d[11],d[12],d[13],d[14],d[916],d[915],d[874],d[835]]},{"SlotName":"/1254144,5841173/computerhope_com-medrectangle-2","Deals":[d[17],d[18],d[19],d[20],d[1428],d[2310],d[2339],d[2351],d[2526],d[2527],d[2610],d[2688],d[2693],d[2761],d[2763],d[2764],d[2765],d[3044],d[3045],d[3052],d[3053],d[3054],d[3154],d[3455],d[3456],d[3457],d[3682],d[3683],d[3684],d[3856],d[4184],d[4185],d[4186],d[4276],d[7],d[8],d[9],d[10],d[11],d[12],d[13],d[14],d[15],d[916],d[915],d[874],d[835]]},{"SlotName":"/1254144,5841173/computerhope_com-box-2","Deals":[d[17],d[18],d[19],d[20],d[1428],d[2310],d[2339],d[2351],d[2526],d[2527],d[2610],d[2688],d[2693],d[2761],d[2763],d[2764],d[2765],d[3044],d[3045],d[3052],d[3053],d[3054],d[3154],d[3455],d[3456],d[3457],d[3682],d[3684],d[3856],d[4184],d[4185],d[4186],d[4276],d[7],d[8],d[9],d[10],d[11],d[12],d[13],d[14],d[916],d[915],d[874],d[835]]},{"SlotName":"/1254144,5841173/computerhope_com-medrectangle-1","Deals":[d[17],d[18],d[19],d[20],d[1428],d[2310],d[2339],d[2351],d[2526],d[2527],d[2610],d[2688],d[2693],d[2761],d[2763],d[2764],d[2765],d[3044],d[3045],d[3052],d[3053],d[3054],d[3154],d[3455],d[3456],d[3457],d[3682],d[3684],d[3856],d[4184],d[4185],d[4186],d[4276],d[7],d[8],d[9],d[10],d[11],d[12],d[13],d[14],d[916],d[915],d[874],d[835]]},{"SlotName":"/1254144,5841173/computerhope_com-medrectangle-1","Deals":[d[17],d[18],d[19],d[20],d[1428],d[2310],d[2339],d[2351],d[2526],d[2527],d[2610],d[2688],d[2693],d[2761],d[2763],d[2764],d[2765],d[3044],d[3045],d[3052],d[3053],d[3054],d[3154],d[3455],d[3456],d[3457],d[3682],d[3684],d[3856],d[4184],d[4185],d[4186],d[4276],d[7],d[8],d[9],d[10],d[11],d[12],d[13],d[14],d[916],d[915],d[874],d[835]]}]}();
+        </script>
+        <script type='text/javascript'>_ebcids=[138231308856,138231308940,138231308949,138231387842,138231421744,138231421759,138231421774,138231421783,138231421789,138231421792,138242067587,138242067590,138242067602,138242067605,138242067608,138242067614,138242229406,138242229415,138242229421,138242229430];</script>
+        <script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>ezobv=210;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>__ez.fads=window.__ez.fads||{cmd:[],initslots:{},kvStore:{},divs:[[],[],[],[],[],[],[]],divsd:[],fadcount:0};var ez_ad_units=[];var ezslots=[];var ezrpos=[];var ezsrqt={};var __ez_fad_haspo=false;var __ez_fad_hascp=false;if(typeof PerformanceObserver!='undefined'&&typeof PerformanceObserver.supportedEntryTypes!='undefined'){if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){__ez_fad_haspo=true;}}
+        try{var __ez_fad_po=new PerformanceObserver((entryList)=>{window.__ez_fad_hascp=true;__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_hascp=true;});});__ez_fad_po.observe({type:'largest-contentful-paint',buffered:true});}catch(e){}
+        var __ez_fad_floatshowd=false;__ez.fads.__ez_fad_floatshow=function(d){if(__ez_fad_floatshowd===true||typeof __ez_fad_floating==='undefined'){return;}
+        __ez_fad_floatshowd=true;var e=document.getElementById('ezmobfooter');if(e!=null){e.classList.add('ezmobtrans');}else{var head=document.head||document.getElementsByTagName('head')[0],style=document.createElement('style');head.appendChild(style);var css="body > #ezmobfooter{bottom:0px;visibility:visible;}";style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.appendChild(document.createTextNode(css));}}
+        googletag.cmd.push(function(){for(var i=0;i<__ez_fad_floating.length;i++){var s=__ez.fads.initslots[__ez_fad_floating[i]](null);googletag.display(__ez_fad_floating[i]);if(typeof window.adjustHbValues==='function'){window.adjustHbValues(window[s]);}
+        if(typeof window.__ezWillLoadCnx!=='undefined'&&window[s].getTargeting('al')[0]=='1039'){window.__ezsbwcmd=window.__ezsbwcmd||[];let sr=[window[s]];window.__ezsbwcmd.push(function(){if(typeof __ezcnxPlayer==='undefined'||!__ezcnxPlayer.getSize()){googletag.pubads().refresh(sr);}else{__ezcnxPlayer.once('removed',function(){googletag.pubads().refresh(sr);})}});continue;}
+        if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(x){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh(x);}
+        else{setTimeout(()=>{ezChkWfhb(x);},50);}}
+        ezChkWfhb([window[s]]);}
+        else{googletag.pubads().refresh([window[s]]);}}});};function __ez_fad_csnt(){return document.cookie.indexOf('ezCMPCookieConsent')!==-1||typeof __ez_conestreq=='undefined';}
+        function __ez_fad_rdy(){var h=document.documentElement.scrollHeight;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(document.body!==null&&(__ez_fad_haspo===false&&h>vh||__ez_fad_hascp||document.readyState==='complete')){return true;}}
+        function __ez_fad_position(id){if(__ez.fads.loaded){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+        __ez.fads.fadcount++;var did=document.getElementById(id);if(did===null){return;}
+        var rect=did.getBoundingClientRect();var vs=window.scrollY||document.body.scrollTop||document.documentElement.scrollTop;var vh=vs+window.screen.height;var vw=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(rect.top>=vh){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+        __ez.fads.divs[0].push(id);__ez.fads.divsd.push(id);if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+        __ez_fad_display(id);}
+        function __ez_fad_display(id){if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+        __ez_fad_gpt();if(__ez_fad_floating.indexOf(id)!==-1){setTimeout(__ez.fads.__ez_fad_floatshow,0);return;}
+        googletag.cmd.push(function(){var sn=__ez.fads.initslots[id](0);if(!sn){return;}
+        var s=window[sn];googletag.display(id);if(typeof window.ezasBuild==='function'){if(window.ezasBuild(s)){return;}}
+        if(typeof window.adjustHbValues==='function'){window.adjustHbValues(s);}
+        if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh([s]);}
+        else{setTimeout(ezChkWfhb,50);}}
+        ezChkWfhb();}
+        else{googletag.pubads().refresh([s]);}});}
+        function ezSetTargetingFromMap(slot,obj){if(typeof slot==='undefined'){return;}
+        for(var key in obj){if(!obj.hasOwnProperty(key)){continue;}
+        slot.setTargeting(key,obj[key]);}}
+        function ezSetSlotTargeting(divid,key,value){var slot=ezGetSlotById(divid);if(slot){slot.setTargeting(key,value);}else{if(typeof __ez.fads.kvStore[divid]=='undefined'){__ez.fads.kvStore[divid]={};}
+        __ez.fads.kvStore[divid][key]=value;}}
+        function ezGetSlotById(id){if(typeof window.ezslots==='undefined'||window.ezslots==0){return;}
+        for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+        var slotId=slot.getSlotElementId();if(typeof slotId!=='undefined'&&slotId==id){return slot;}}}
+        function __ez_close_anchor(){googletag.cmd.push(function(slot){for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+        var alS=slot.getTargeting('al')[0]%1000;if(alS==5){googletag.destroySlots([slot]);}}
+        if(typeof window.ezdomain!=='undefined'){var d=new Date();d.setTime(d.getTime()+(2*60*60*1000));var expires="expires="+d.toGMTString();let cookie="ez_anchor_closed=true;domain=."+ezdomain+';'+expires+"; path=/";document.cookie=cookie;}
+        if(typeof(__ez_set_outstream_floor)!=='undefined'){__ez_set_outstream_floor(0);}
+        var anchor=document.getElementById('ezmobfooter');if(!anchor){return;}
+        anchor.innerHTML='';var styleElement=document.getElementById('ezoicCSS');if(!styleElement){return;}
+        var cert=document.getElementById('ezoic-certification-fixed');if(cert){cert.style.bottom='15px';}
+        var styles=styleElement.sheet?styleElement.sheet:styleElement.styleSheet;for(var i=0;i<styles.cssRules.length;i++){var rules=styles.cssRules[i];if(rules.selectorText==='body'&&rules.style.height==='auto'&&(rules.style.paddingTop!==''||rules.style.paddingBottom!=='')){styles.deleteRule(i);}}});}</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;window.ezoViewCheck=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezogetbrkey = function(s){ var k = 'br1';var k2 = 'eb_br';if(window.ezogtk == ""){k='br1u';k2='eb_bru';}else if(window.ezogtk != "NT"){k='br1t';k2='eb_brt';} s.setTargeting('br1', s.getTargeting(k));s.setTargeting('eb_br', s.getTargeting(k2));};googletag.cmd.push(function() {googletag.pubads().enableSingleRequest();googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotResponseReceived', function(event) { __ez.queue.addFunc("ezsr", "ezsr", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotRequested', function(e) { window.ezsrqt[e.slot.getSlotElementId()] = Date.now();});googletag.pubads().disableInitialLoad();googletag.pubads().enableLazyLoad({fetchMarginPercent: 300, renderMarginPercent: 50, mobileScaling: 2.0});googletag.enableServices();});window.ezoll = false;window.ezoadxnc = '1254144';window.ezoadhb = '1000';var ezaxmns={};var ezaucmns={};
+        
+                var __ez_fad_floating = ['div-gpt-ad-computerhope_com-medrectangle-2-0'];
+                var __ez_fad_gptd = __ez_fad_gptd || false;var __ez_fad_ezpbinitd = false;var __ez_fad_pbt = setTimeout(function(){__ez_fad_pb();},5000);function __ez_fad_gpt(){if(__ez_fad_gptd == false){__ez_fad_gptd=true;!function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//securepubads.g.doubleclick.net/tag/js/gpt.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(t,c)}();}}function __ez_fad_pb(){if(__ez_fad_ezpbinitd==false && typeof __ez_fad_ezpbinit == 'function'){__ez_fad_ezpbinitd = true;__ez_fad_ezpbinit()}};
+                
+            function __ez_init_slot(bvr, did, slotNum, defineFunc) {
+                googletag.cmd.push(function() {
+                    defineFunc();
+                    ezrpos[slotNum]=slotNum;
+                    ezslots.push("ezslot_" + slotNum);
+                    if(__ez.fads.kvStore[did] !== 'undefined') {
+                        for (var name in __ez.fads.kvStore[did]) {
+                            if (!__ez.fads.kvStore.hasOwnProperty(name)) {
+                                ezSetSlotTargeting(did, name, __ez.fads.kvStore[did][name]);
+                            }
+                        }
+                        __ez.fads.kvStore[did] = {};
+                    }
+                });return "ezslot_" + slotNum;
+            }
+        __ez.fads.initslots['div-gpt-ad-computerhope_com-medrectangle-2-0'] = function(bvr){
+                        var defScript = function() {ezslot_0 = googletag.defineSlot('/1254144,5841173/computerhope_com-medrectangle-2',[728,90],'div-gpt-ad-computerhope_com-medrectangle-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_0_raw = {'a':'1','iid1':'1540642021549825','eid':'1540642021549825','t':'134','d':'393598','t1':'134','pvc':'1','ap':'1100','sap':'1100','a':'|0|','as':'revenue','plat':'1','bra':'mod13-c','ic':'1','at':'mbf','adr':'399','ezosn':'0','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'5','al':'1005','compid':'0','tap':'computerhope_com-medrectangle-2-1540642021549825','eb_br':'c5429b6ddd929d0bc40a832a87789a7c','eba':'1','ebss':[10017,10061,10015,10063,11307],'bv':'2','bvm':'0','bvr':'6','avc':'362','shp':'1','ftsn':'12','ftsng':'12','br1':'1000','br2':'500','ezoic':'1','nmau':'0','mau':'0','stl':[77,168,0,4,0,131,192,192,192,209,187,0,901,182,901,902,903],'deal1':[21,22,23,24,25,26,27,28,29,30,760,761,813,814,815,816,817,818,819,893,899,903,917,918,919,1794,3430,3458,3460,3915,3919,3933,4604,4605,2030,5022,5136,774,16]}; window.ezslots_raw.push( ezslot_0_raw);ezSetTargetingFromMap(ezslot_0,ezslot_0_raw);};
+                        return __ez_init_slot(bvr,'div-gpt-ad-computerhope_com-medrectangle-2-0',0, defScript);
+                    };__ez.fads.initslots['div-gpt-ad-computerhope_com-box-2-0'] = function(bvr){
+                        var defScript = function() {ezslot_1 = googletag.defineSlot('/1254144,5841173/computerhope_com-box-2',[970,250],'div-gpt-ad-computerhope_com-box-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_1_raw = {'a':'1','iid1':'4021889103519892','eid':'4021889103519892','t':'134','d':'393598','t1':'134','pvc':'1','ap':'1102','sap':'1102','a':'|0|','as':'revenue','plat':'1','bra':'mod13-c','ic':'1','at':'mbf','adr':'399','ezosn':'1','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'1','al':'1001','compid':'1','tap':'computerhope_com-box-2-4021889103519892','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10061,10015,10063,11307],'bv':'5','bvm':'0','bvr':'5','avc':'319','shp':'1','ftsn':'12','ftsng':'12','acptad':'1','br1':'0','br2':'450','ezoic':'1','nmau':'0','mau':'0','stl':[63,14,28,4,51,0,88,0,71,30,0,31,901,902,903],'deal1':[21,22,23,24,25,26,919,1794,3430,3458,3460,3683,3919,3933,4604,4605,2030,5022,5136,774,15,16]}; window.ezslots_raw.push( ezslot_1_raw);ezSetTargetingFromMap(ezslot_1,ezslot_1_raw);};
+                        return __ez_init_slot(bvr,'div-gpt-ad-computerhope_com-box-2-0',1, defScript);
+                    };__ez.fads.initslots['div-gpt-ad-computerhope_com-medrectangle-1-0'] = function(bvr){
+                        var defScript = function() {ezslot_2 = googletag.defineSlot('/1254144,5841173/computerhope_com-medrectangle-1',[[300,250], ['fluid']],'div-gpt-ad-computerhope_com-medrectangle-1-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_2_raw = {'a':'1','iid1':'2656875905530431','eid':'2656875905530431','t':'134','d':'393598','t1':'134','pvc':'1','ap':'1103','sap':'1103','a':'|0|','as':'revenue','plat':'1','bra':'mod13-c','ic':'1','at':'mbf','adr':'399','ezosn':'2','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'4','al':'1004','compid':'0','tap':'computerhope_com-medrectangle-1-2656875905530431','eb_br':'eeb0e32289ff31f9ddef18331038e5e9','eba':'1','ebss':[10017,10061,10015,10063,11307],'bv':'5','bvm':'0','bvr':'5','avc':'317','shp':'3','ftsn':'12','ftsng':'12','acptad':'1','br1':'900','br2':'450','ezoic':'1','nmau':'3','mau':'0','stl':[118,193,0,192,0,193,196,20,71,201,192,31,902,903,901,902,903],'deal1':[21,22,23,24,25,26,919,1794,3430,3458,3460,3683,2030,5022,5136,774,15,16]}; window.ezslots_raw.push( ezslot_2_raw);ezSetTargetingFromMap(ezslot_2,ezslot_2_raw);};
+                        return __ez_init_slot(bvr,'div-gpt-ad-computerhope_com-medrectangle-1-0',2, defScript);
+                    };__ez.fads.initslots['div-gpt-ad-computerhope_com-medrectangle-1-0_1'] = function(bvr){
+                        var defScript = function() {ezslot_3 = googletag.defineSlot('/1254144,5841173/computerhope_com-medrectangle-1',[[300,250], ['fluid']],'div-gpt-ad-computerhope_com-medrectangle-1-0_1').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_3_raw = {'a':'1','iid1':'2656875905530431','eid':'2656875905530431','t':'134','d':'393598','t1':'134','pvc':'1','ap':'1103','sap':'1103','a':'|0|','as':'revenue','plat':'1','bra':'mod13-c','ic':'1','at':'mbf','adr':'399','ezosn':'3','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'4','al':'1004','compid':'0','tap':'computerhope_com-medrectangle-1-2656875905530431','eb_br':'eeb0e32289ff31f9ddef18331038e5e9','eba':'1','ebss':[10017,10061,10015,10063,11307],'bv':'5','bvm':'0','bvr':'5','avc':'317','shp':'3','ftsn':'12','ftsng':'12','acptad':'1','br1':'900','br2':'450','ezoic':'1','nmau':'3','mau':'1','stl':[118,193,0,192,0,193,196,20,71,201,192,31,902,903,901,902,903],'deal1':[21,22,23,24,25,26,919,1794,3430,3458,3460,3683,2030,5022,5136,774,15,16]}; window.ezslots_raw.push( ezslot_3_raw);ezSetTargetingFromMap(ezslot_3,ezslot_3_raw);};
+                        return __ez_init_slot(bvr,'div-gpt-ad-computerhope_com-medrectangle-1-0_1',3, defScript);
+                    };__ez.fads.initslots['div-gpt-ad-computerhope_com-medrectangle-1-0_2'] = function(bvr){
+                        var defScript = function() {ezslot_4 = googletag.defineSlot('/1254144,5841173/computerhope_com-medrectangle-1',[[300,250], ['fluid']],'div-gpt-ad-computerhope_com-medrectangle-1-0_2').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_4_raw = {'a':'1','iid1':'2656875905530431','eid':'2656875905530431','t':'134','d':'393598','t1':'134','pvc':'1','ap':'1103','sap':'1103','a':'|0|','as':'revenue','plat':'1','bra':'mod13-c','ic':'1','at':'mbf','adr':'399','ezosn':'4','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'4','al':'1004','compid':'0','tap':'computerhope_com-medrectangle-1-2656875905530431','eb_br':'eeb0e32289ff31f9ddef18331038e5e9','eba':'1','ebss':[10017,10061,10015,10063,11307],'bv':'5','bvm':'0','bvr':'5','avc':'317','shp':'3','ftsn':'12','ftsng':'12','acptad':'1','br1':'900','br2':'450','ezoic':'1','nmau':'3','mau':'2','stl':[118,193,0,192,0,193,196,20,71,201,192,31,902,903,901,902,903],'deal1':[21,22,23,24,25,26,919,1794,3430,3458,3460,3683,2030,5022,5136,774,15,16]}; window.ezslots_raw.push( ezslot_4_raw);ezSetTargetingFromMap(ezslot_4,ezslot_4_raw);};
+                        return __ez_init_slot(bvr,'div-gpt-ad-computerhope_com-medrectangle-1-0_2',4, defScript);
+                    };</script>
+        <script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+        catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+        function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+        remove_ama_config()})()</script>
+        <script type="text/javascript">var ezoicTestActive = true</script>
+        <script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod13-c","ad_cache_level":2,"ad_count_adjustment":3,"ad_lazyload_version":6,"ad_load_version":1,"ad_location_ids":"5,1,4,4,4","adx_ad_count":4,"bidder_method":1,"bidder_version":4,"city":"","country":"US","days_since_last_visit":-1,"display_ad_count":2,"domain_id":393598,"ds_adsize_opt_id":-1,"engaged_time_visit":33,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"1680822612606","last_pageview_id":"599cec95-bd4b-4f9e-61b4-18d2f8bb1c61","lt_cache_level":0,"max_ads":24,"metro_code":0,"optimization_version":1,"page_ad_positions":"1100,1102,1103,1103,1103","page_view_count":1,"page_view_id":"a4ef6372-ca4c-4e72-6e12-ad2f203eeceb","position_selection_id":46,"postal_code":"","pv_event_count":0,"response_size_orig":33651,"response_time_orig":5,"serverid":"i-0706ad03dabf45a91","state":"","sub_page_ad_positions":"1100,1102,1103,1103,1103","t_epoch":1680822650,"template_id":134,"time_on_site_visit":39,"url":"https://www.computerhope.com/issues/ch000746.htm","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":2242,"worst_bad_word_level":0};var _ezim_d = {"computerhope_com-box-2":{"adsense_stat_source_id":5,"adx_ad_count":4,"adx_stat_source_id":35,"full_id":"computerhope_com-box-2/2023-04-06/4021889103519892","height":"250","position_id":1102,"sub_position_id":1102,"width":"970"},"computerhope_com-medrectangle-1":{"adsense_stat_source_id":5,"adx_ad_count":4,"adx_stat_source_id":35,"full_id":"computerhope_com-medrectangle-1/2023-04-06/2656875905530431","position_id":1103,"sub_position_id":1103},"computerhope_com-medrectangle-1_1":{"adsense_stat_source_id":5,"adx_ad_count":4,"adx_stat_source_id":35,"full_id":"computerhope_com-medrectangle-1/2023-04-06/2656875905530431","position_id":1103,"sub_position_id":1103},"computerhope_com-medrectangle-1_2":{"adsense_stat_source_id":5,"adx_ad_count":4,"adx_stat_source_id":35,"full_id":"computerhope_com-medrectangle-1/2023-04-06/2656875905530431","position_id":1103,"sub_position_id":1103},"computerhope_com-medrectangle-2":{"adsense_stat_source_id":5,"adx_ad_count":4,"adx_stat_source_id":35,"full_id":"computerhope_com-medrectangle-2/2023-04-06/1540642021549825","height":"90","position_id":1100,"sub_position_id":1100,"width":"728"}};var _ezat = {"domain_id":393598,"form_factor_id":1,"framework_id":1,"pageview_date":"2023-04-06","pageview_id":"a4ef6372-ca4c-4e72-6e12-ad2f203eeceb","template_id":134,"url":"https://www.computerhope.com/issues/ch000746.htm","visit_uuid":"d0a9ab88-a342-40d3-42f2-c1c9032efd56"};</script><script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=195-0&bv=210&v=74&PageSpeed=off', true, [], true, false, false, true);</script>
+        <script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script>
+        <title>How to View the HTML Source Code of a Web Page</title>
+        <base href="https://www.computerhope.com/issues/ch000746.htm" />
+        <link rel="canonical" href="https://www.computerhope.com/issues/ch000746.htm" />
+        <link href="https://www.computerhope.com/ch.css" type="text/css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="Steps on how to view the source code of any web page on the Internet." name="description" />
+        <meta itemprop="name" content="How to View the HTML Source Code of a Web Page" />
+        <meta itemprop="description" content="Steps on how to view the source code of any web page on the Internet." />
+        <meta property="og:url" content="https://www.computerhope.com/issues/ch000746.htm" />
+        <meta property="og:description" content="Steps on how to view the source code of any web page on the Internet." />
+        <meta property="og:title" content="How to View the HTML Source Code of a Web Page" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="How to View the HTML Source Code of a Web Page" />
+        <meta name="twitter:description" content="Steps on how to view the source code of any web page on the Internet." />
+        <meta name="twitter:creator" content="@computerhope" />
+        <!--[if lt IE 9]><script src="https://www.computerhope.com/cdn/html5shiv.js"></script><![endif]-->
+        <meta property="og:image" content="https://www.computerhope.com/issues/pictures/safari-show-develop-menu.png" />
+        <meta itemprop="image" content="https://www.computerhope.com/issues/pictures/safari-show-develop-menu.png" />
+        <link rel="image_src" href="https://www.computerhope.com/issues/pictures/safari-show-develop-menu.png" />
+        <link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://feeds.feedburner.com/LatestNewPagesOnComputerHope" />
+        <link rel="apple-touch-icon" href="https://www.computerhope.com/cdn/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="https://www.computerhope.com/cdn/favicon.ico" type="image/x-icon" />
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T1EX4SSG9F"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T1EX4SSG9F');
+        </script>
+        <style id='ezoicCSS'>.ezoic-at-0{line-height:0px;padding:0;min-width:970px;float:none !important;text-align:center !important;margin-right:auto !important;max-width:100% !important;margin-left:auto !important;}
+        .ezoic-ad.box-2102{min-height:250px;display:block !important;margin-top:15px !important;margin-bottom:15px !important;}
+        .ezoic-ad.medrectangle-1103{display:flex !important;width:970px;background:0 0 !important;min-height:0px !important;justify-content:space-between;margin-top:15px !important !important;margin-bottom:15px !important !important;}
+        .ezoic-ad.medrectangle-2100{display:inline-block;min-width:728px;min-height:90px;max-width:100% !important;line-height:0px;padding:0;float:none !important;}
+        .ezoic-ad{display:inline-block;border:0px;}.ezoic-ad>div>iframe{margin:0px!important;padding:0px!important;}
+        .ezmob-footer{position:fixed;left:0;bottom:0;width:100%;background:#fff;z-index:100000;line-height:0}.ezmob-footer-desktop{background-color:#fffc;border-top:1px solid #d3d3d3;padding-top:5px}.ezmob-footer-close{cursor:pointer;color:#b2b2b2;border:1px solid #b2b2b2;border-radius:20px;background:#fff;line-height:20px;display:inline-block;font-size:20px;font-family:arial,sans-serif;padding:0 5px;position:absolute;top:5px;right:5px;height:24px;width:21px;text-align:center}body {
+                            padding-bottom: 100px !important;
+                            height: auto;
+                        }
+                        </style><script type="text/javascript">var ezouid = "1";</script><script type='text/javascript'>
+        var ezoTemplate = 'pub_site';
+        if(typeof ezouid == 'undefined')
+        {
+            var ezouid = 'none';
+        }
+        var ezoFormfactor = '1';
+        var ezo_elements_to_check = Array();
+        </script>
+        <script data-ezscrex="false" type='text/javascript'>
+        var soc_app_id = '0';
+        var did = 393598;
+        var ezdomain = 'computerhope.com';
+        var ezoicSearchable = 1;
+        </script>
+        
+        
+        <script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+        function create_ezolpl(pvID, rv) {
+            var d = new Date();
+            d.setTime(d.getTime() + (365*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            __ez.ck.setByCat("ezux_lpl_393598=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+        }
+        function attach_ezolpl(pvID, rv) {
+            if (document.readyState === "complete") {
+                create_ezolpl(pvID, rv);
+            }
+            if(window.attachEvent) {
+                window.attachEvent("onload", create_ezolpl, pvID, rv);
+            } else {
+                if(window.onload) {
+                    var curronload = window.onload;
+                    var newonload = function(evt) {
+                        curronload(evt);
+                        create_ezolpl(pvID, rv);
+                    };
+                    window.onload = newonload;
+                } else {
+                    window.onload = create_ezolpl.bind(null, pvID, rv);
+                }
+            }
+        }
+        
+        __ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["a4ef6372-ca4c-4e72-6e12-ad2f203eeceb", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+        </script>
+        <script type="text/javascript">var _audins_dom="computerhope_com",_audins_did=393598;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-0&cb=04-3y02-8y06-13y07-2y0b-6y0d-23y17-4y1b-5y25-3y33-4y3c-12y3d-5y5f-2y63-22&cmbcb=132&sj=x04x02x06x07x0bx0dx17x1bx25x33x3cx3dx5fx63', true, [], true, false, true, false);</script>
+        <script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-0&cb=03-8y0c-6y1c-5y64-22&cmbcb=132&sj=x03x0cx1cx64', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head>
+        <body><script>var ezAardvarkDetected;function ezDetectAardvark(){if(typeof __ez!=='undefined'&&typeof __ez.bit!=='undefined'){let bait=document.createElement("div");bait.className="textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox";bait.style.height="1px";document.body.appendChild(bait);let baitOffsetHeight=bait.offsetHeight;if(baitOffsetHeight){ezAardvarkDetected=false;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',false))]);}
+        else{ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}
+        var observer=new MutationObserver(function(e){if(e[0].removedNodes){ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}});observer.observe(bait,{childList:true,attributes:true});}}
+        window.addEventListener('load',(e)=>{ezDetectAardvark();});</script>
+        <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+        <div class="wrapper">
+        <header class="cf"><div class="hcontain"><a href="/"><img src="/cdn/computer-hope.png" width="412" height="82" alt="Computer Hope" aria-label="Computer Hope home page" class="logo" /></a><div itemscope="" itemtype="https://schema.org/SiteNavigationElement"><form action="https://www.computerhope.com/cgi-bin/search.cgi" role="search" method="post"><input class="sbar" name="q" aria-label="search" type="text" /><button type="Submit">Search</button></form><nav><ul id="nav"><li><a href="/oh.htm" title="Questions and answers, troubleshooting, and help">Help</a></li><li><a href="/tips/" title="Computer tips and tricks">Tips</a></li><li><a href="/jargon.htm" title="Computer terms, jargon, and glossary">Dictionary</a></li><li><a href="/history/" title="Computer timeline, events, and biographies">History</a></li><li><a href="/forum/" title="Computer Hope forums and community">Forums</a></li><li><a href="/contact/" title="Contact Computer Hope or other computer companies">Contact</a></li></ul></nav></div></div></header>
+        <div class="container ad" aria-hidden="true">
+        <span id="ezoic-pub-ad-placeholder-102"></span><span class="ezoic-ad ezoic-at-0 box-2 box-2102 adtester-container adtester-container-102" data-ez-name="computerhope_com-box-2"><span id="div-gpt-ad-computerhope_com-box-2-0" ezaw="970" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:970px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">
+            var cid = '7530692077';
+            var pid = 'ca-pub-3999293766533555';
+            var slotId = 'div-gpt-ad-computerhope_com-box-2-0';
+            var ffid = 1;
+            var alS = 1001 % 1000;
+        
+            var container = document.getElementById(slotId);
+            container.style.width = '100%';
+        
+            var ins = document.createElement('ins');
+            ins.id = slotId + '-asloaded';
+            ins.className = 'adsbygoogle ezasloaded';
+            ins.dataset.adClient = pid;
+        
+            ins.dataset.adChannel = cid;
+        
+            if(ffid == 2){
+                ins.dataset.fullWidthResponsive = 'true';
+            }
+        
+            ins.style.display = 'block';
+            ins.style.minWidth = container.attributes.ezaw.value + 'px';
+            ins.style.width = '100%';
+            
+            ins.style.height = container.attributes.ezah.value + 'px';
+        
+            container.appendChild(ins);
+        
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        
+            window.ezoSTPixelAdd(slotId, 'stat_source_id', 44);
+            window.ezoSTPixelAdd(slotId, 'adsensetype', 1);
+            
+            var lo = new MutationObserver(window.ezaslEvent);
+            lo.observe(document.getElementById(slotId + '-asloaded'), { attributes: true });
+            </script></span></span>
+        </div>
+        <nav class="container" aria-label="breadcrumb"><span id="ezoic-pub-ad-placeholder-125" class="ezoic-adpicker-ad"></span><ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="/oh.htm" itemprop="item"><span itemprop="name">Help</span></a><meta itemprop="position" content="2" /></li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="/learnhtm.htm" itemprop="item"><span itemprop="name">HTML Help</span></a><meta itemprop="position" content="3" /></li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a href="/htmlqa.htm" itemprop="item"><span itemprop="name">HTML Q&amp;A</span></a><meta itemprop="position" content="4" /></li></ol></nav>
+        <div class="container content" id="main-content" role="main"><span id="ezoic-pub-ad-placeholder-124" class="ezoic-adpicker-ad"></span>
+        <article>
+        <h1 itemprop="headline">How to view the HTML source code of a web page</h1>
+        <div class="updated">Updated: <span itemprop="dateModified" content="2021-02-01">02/01/2021</span> by <span itemprop="author publisher creator" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="name">Computer Hope</span></span></div>
+        <img src="/issues/pictures/view-source.png" width="352" height="304" alt="View source code" class="floatRight resize350" />
+        <p class="intro">Every major <a href="/jargon/b/browser.htm">Internet browser</a> allows users to view any web page&#39;s HTML source code. The following sections contain information on the multiple ways to view the <a href="/jargon/s/source.htm">source code</a> in each major browser. To proceed, choose an entry from the list below and follow the instructions.</p>
+        <div class="pagenav contents" role="navigation" aria-label="contents">
+        <ul>
+        <li><a href="#intro">Introductory information</a></li>
+        <li><a href="#chrome">Google Chrome</a></li>
+        <li><a href="#fox">Mozilla Firefox</a></li>
+        <li><a href="#edge2">Microsoft Edge</a></li>
+        <li><a href="#msie">Microsoft Internet Explorer</a></li>
+        <li><a href="#safari">Safari</a></li>
+        <li><a href="#opera">Opera</a></li>
+        <li><a href="#android">Android phone or tablet using Chrome</a></li>
+        <li><a href="#ios">iPhone or iPad using Safari</a></li>
+        <li><a href="#close">How to close the source code page or tool</a></li>
+        <li><a href="#online">Use an online tool to view the source code</a></li>
+        </ul>
+        </div>
+        <h2 id="intro">Introductory information</h2>
+        <p class="tab">When viewing the source code of a web page, the information and code processed by the server won&#39;t appear. For example, a <a href="/jargon/s/searengi.htm">search engine</a> processes information on a <a href="/jargon/s/server.htm">server</a> and then displays the results on a web page. In other words, you can view the code that makes up the results page, but you cannot view the search engine&#39;s source code.</p>
+        <p class="tab">This rule applies to all <a href="/jargon/s/server-side-scripting.htm">server-side scripts</a>, <a href="/jargon/s/ssi.htm">SSI</a>, and programming code. Therefore, you cannot view a script&#39;s source code used in search engines, forums, polls, chat, etc. Also, copying the information from the source code may cause errors or direct you back to the page from which you copied the information.</p>
+        <h2 id="chrome">Google Chrome</h2>
+        <img src="/cdn/chromelogo.png" width="100" height="100" alt="Chrome logo" class="floatRightIcon" />
+        <p class="tab">To view the source code of a web page in <a href="/jargon/c/chrome.htm">Google Chrome</a>, use any of the following methods.</p>
+        <h3 class="tab">View source code only</h3>
+        <p class="tabb">Method one</p>
+        <p class="tab">To view only the source code, press the shortcut keys <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> on your computer&#39;s keyboard.</p>
+        <p class="tabb">Method two</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>View page source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/chrome-view-page-source.png" width="362" height="360" alt="View page source in Chrome." class="resize350" /></p>
+        <h3 class="tab">View page source with elements</h3>
+        <ol>
+        <li>Open <a href="/jargon/c/chrome.htm">Chrome</a> and navigate the web page whose source code you&#39;d like to view.</li>
+        <li>Click the <b>Customize and control Google Chrome</b> <img src="/issues/pictures/chrome-menu-icon.png" width="30" height="30" alt="Chrome settings icon" class="vcicon" /> icon in the upper-right corner of the browser window.</li>
+        <li>From the <a href="/jargon/d/dropdm.htm">drop-down menu</a> that appears, select <b>More tools</b>, then select <b>Developer tools</b>.</li>
+        <li>Click the <b>Elements</b> tab in the top-left corner of the new section that appears at the bottom of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/chrome-elements-tab.png" width="760" height="48" alt="Elements tab in Chrome." class="resize760" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>In Chrome, pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> also brings up the interactive developer tool. This tool provides more interaction with the source code and <a href="/jargon/c/css.htm">CSS</a> settings, allowing users to see how changes in the code affect the web page immediately.</p>
+        </div>
+        <h2 id="fox">Mozilla Firefox</h2>
+        <img src="/cdn/firefox.png" width="100" height="100" alt="Firefox logo" class="floatRightIcon" />
+        <p class="tab">To view the source code of a web page in <a href="/jargon/f/firefox.htm">Mozilla Firefox</a>, use any of the following methods.</p>
+        <h3 class="tab">View source code only</h3>
+        <p class="tabb">Method one</p>
+        <p class="tab">To view only the source code, press <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> on your computer&#39;s keyboard.</p>
+        <p class="tabb">Method two</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>View Page Source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/firefox-view-page-source.png" width="203" height="289" alt="View page source in Firefox." /></p>
+        <h3 class="tab">View page source with elements</h3>
+        <ol>
+        <li>Open <a href="/jargon/f/firefox.htm">Firefox</a> and navigate to the web page whose source code you want to view.</li>
+        <li>Click the <b>Menu</b> <img src="/issues/pictures/firefox-menu-icon.jpg" width="30" height="30" alt="Firefox Menu Icon" class="vcicon" /> icon in the top-right corner of the screen.</li>
+        <li>Select <b>More tools</b> in the <a href="/jargon/d/dropdm.htm">drop-down menu</a>, then select <b>Web Developer Tools</b> from the expanded menu.</li>
+        <li>Click the <b>Inspector</b> tab in the top-left corner of the section that appears at the bottom of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/firefox-inspector-tab.png" width="671" height="50" alt="Firefox Inspector tab." class="resize650" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>In Firefox, pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> also brings up the interactive developer tool. This tool provides interaction with the source code and CSS settings, allowing users to see how changes in the code affect the web page in real-time.</p>
+        </div>
+        <h3 class="tab">View a section of the page&#39;s source code</h3>
+        <ol>
+        <li><a href="/jargon/h/highligh.htm">Highlight</a> the portion of a web page where you want to view the source code.</li>
+        <li><a href="/jargon/r/righclic.htm">Right-click</a> that highlighted section and select <b>View Selection Source</b>.</li>
+        </ol>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>You can use the <a href="/tips/tip144.htm">Firebug add-on</a> to view and edit a page&#39;s source code, and view the changes live through the browser.</p>
+        </div>
+        <h2 id="edge2">Microsoft Edge</h2>
+        <img src="/cdn/edge.png" width="100" height="100" alt="Microsoft Edge logo" class="floatRightIcon" />
+        <p class="tab">To view the source code of a web page in <a href="/jargon/m/microsoft-edge.htm">Microsoft Edge</a>, use any of the following methods.</p>
+        <h3 class="tab">View source code only</h3>
+        <p class="tabb">Method one</p>
+        <p class="tab">To view only the source code, press <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> on your computer&#39;s keyboard.</p>
+        <p class="tabb">Method two</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>View page source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/edge2-view-page-source-selector.png" width="309" height="450" alt="View page source selector in Edge." /></p>
+        <h3 class="tab">View page source with elements</h3>
+        <ol>
+        <li>Open <a href="/jargon/m/microsoft-edge.htm">Microsoft Edge</a> and navigate to the web page whose source code you want to view.</li>
+        <li>Click the <b>Settings and more</b> <img src="/issues/pictures/edge-more-icon.jpg" width="30" height="30" alt="Edge more icon" class="vcicon" /> icon in the upper-right corner of the screen.</li>
+        <li>Move your mouse over <b>More tools</b> in the <a href="/jargon/d/dropdm.htm">drop-down menu</a>, and select <b>Developer tools</b> from the expanded menu.</li>
+        <li>Click the <b>Elements</b> tab at the top of the window that appears on the right side of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/edge2-elements-tab.png" width="556" height="54" alt="Elements tab in Edge." class="resize550" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>In Microsoft Edge, pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> also brings up the interactive developer tool. This tool provides interaction with the source code and CSS settings, allowing users to see how changes in the code affect the web page in real-time.</p>
+        </div>
+        <h2 id="msie">Microsoft Internet Explorer</h2>
+        <img src="/cdn/ie.png" width="100" height="100" alt="Internet Explorer logo" class="floatRightIcon" />
+        <p class="tab">To view the source code of a web page in <a href="/jargon/m/msie.htm">Microsoft Internet Explorer</a>, use any of the following methods.</p>
+        <h3 class="tab">View source code only</h3>
+        <p class="tabb">Method one</p>
+        <p class="tab">To view only the source code, press <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> on your computer&#39;s keyboard.</p>
+        <p class="tabb">Method two</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>View source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/ie-view-source-selector.png" width="264" height="468" alt="View source selector in Internet Explorer." /></p>
+        <h3 class="tab">View page source with elements</h3>
+        <ol>
+        <li>Open <a href="/jargon/m/msie.htm">Internet Explorer</a> and navigate to the web page whose source code you want to view.</li>
+        <li>Click <b>Tools</b> <img src="/issues/pictures/ie-tools.jpg" width="30" height="30" alt="Internet explorer tools icon" class="vcicon" /> in the upper-right corner.</li>
+        <li>Select <b>F12 Developer Tools</b> from the <a href="/jargon/d/dropdm.htm">drop-down menu</a>.</li>
+        </ol>
+        <ol start="4">
+        <li>Click the <b>DOM Explorer</b> tab at the top-left corner of the developer tools menu.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ie-dom-tab.png" width="692" height="96" alt="DOM Explorer tab in Internet Explorer." class="resize700" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>In Internet Explorer, pressing <kbd>F12</kbd> brings up the <a href="/jargon/d/dom.htm">DOM</a> tool. This tool provides interaction with the source code and <a href="/jargon/c/css.htm">CSS</a> settings, allowing users to see how changes in the code affect the web page immediately.</p>
+        </div>
+        <h2 id="safari">Safari</h2>
+        <img src="/cdn/safari.png" width="100" height="100" alt="Safari logo" class="floatRightIcon" />
+        <p class="tab">In Safari, viewing a webpage&#39;s source code requires enabling the developer options. The following sections show you how to turn on this feature and then how to view the source code of a web page.</p>
+        <h3 class="tab">Accessing developer options in Safari</h3>
+        <ol>
+        <li>Open the <a href="/jargon/s/safari.htm">Safari</a> browser.</li>
+        <li>Select <img src="/issues/pictures/macos-safari-selector.jpg" width="75" height="24" alt="Safari selector" class="vcicon6" /> from the menu bar at the top-left corner of the screen.</li>
+        <li>In the <a href="/jargon/d/dropdm.htm">drop-down menu</a> that appears, select <b>Preferences</b>.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/safari-preferences-selector-light.png" width="230" height="279" alt="Preferences selector" /></p>
+        <ol start="4">
+        <li>Click the <b>Advanced</b> <a href="/jargon/t/tab.htm">tab</a>, and check the box next to the <b>Show Develop menu in menu bar</b>.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/safari-show-develop-menu.png" width="767" height="425" alt="Show Develop menu in Safari." class="resize760" /></p>
+        <ol start="5">
+        <li>You should now see the <b>Develop</b> selector in the Apple <a href="/jargon/m/menubar.htm">menu bar</a> at the top of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/safari-develop-selector.png" width="601" height="44" alt="Develop selector in Apple menu bar." class="resize600" /></p>
+        <h3 class="tab">Viewing the source code</h3>
+        <div class="tip tab" role="note">
+        <span class="title note">Note</span>
+        <p>You must have the developer options enabled for the following steps to work.</p>
+        </div>
+        <p class="tabb">Method one</p>
+        <ol>
+        <li>Open <a href="/jargon/s/safari.htm">Safari</a> and navigate to the web page whose source code you want to view.</li>
+        <li>In the Apple <a href="/jargon/m/menubar.htm">menu bar</a> at the top of the screen, click the <b>Develop</b> selector and choose <b>Show Page Source</b> from the <a href="/jargon/d/dropdm.htm">drop-down menu</a>.</li>
+        <li>In the center of the screen, click the <b>Elements</b> tab at the top of the developer tools section.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/safari-elements-tab.png" width="771" height="49" alt="Elements tab in Safari." class="resize760" /></p>
+        <p class="tabb">Method 2</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>Show Page Source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/safari-show-page-source-selector.png" width="163" height="168" alt="Show Page Source selector in Safari." /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>Once the developer options are enabled, you can also press <kbd class="cmd">Command</kbd>+<kbd>option</kbd>+<kbd>U</kbd> to view the source code.</p>
+        </div>
+        <h2 id="opera">Opera</h2>
+        <img src="/cdn/opera.png" width="100" height="100" alt="Opera logo" class="floatRightIcon" />
+        <p class="tab">To view the source code of a web page in <a href="/jargon/o/opera.htm">Opera</a>, use any of the following methods.</p>
+        <h3 class="tab">View source code only</h3>
+        <p class="tabb">Method one</p>
+        <p class="tab">To view only the source code, press <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> on your computer&#39;s keyboard.</p>
+        <p class="tabb">Method two</p>
+        <p class="tab"><a href="/jargon/r/righclic.htm">Right-click</a> a blank part of the web page and select <b>Page source</b> from the <a href="/jargon/p/popupmen.htm">pop-up menu</a> that appears.</p>
+        <p class="dtab"><img src="/issues/pictures/opera-page-source-selector.png" width="262" height="399" alt="Page source selector in Opera." /></p>
+        <h3 class="tab">View page source with elements</h3>
+        <ol>
+        <li>Open <a href="/jargon/o/opera.htm">Opera</a> and navigate to the web page whose source code you want to view.</li>
+        <li>Click the <b>Opera</b> <img src="/issues/pictures/opera-menu-button.jpg" width="30" height="30" alt="Opera Menu button" class="vcicon5" /> icon in the upper-left corner of the browser window.</li>
+        <li>Move your mouse over <b>Developer</b> in the <a href="/jargon/d/dropdm.htm">drop-down menu</a> and select <b>Developer tools</b> from the expanded menu.</li>
+        <li>Click the <b>Elements</b> tab at the top of the window that appears on the right side of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/edge2-elements-tab.png" width="556" height="54" alt="Elements tab in Opera." class="resize550" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>If you don&#39;t see the <b>Developer</b> submenu, select <b>More tools</b> → <b>Show developer menu</b>. Then, click the menu button <img src="/issues/pictures/opera-menu-button.jpg" width="30" height="30" alt="Opera menu button." class="vcicon5" /> again. You should now see the <b>Developer</b> entry listed.</p>
+        </div>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>In Opera, pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> also brings up the interactive developer tool. This tool provides interaction with the source code and <a href="/jargon/c/css.htm">CSS</a> settings, allowing users to see how changes in the code affect the web page in real-time.</p>
+        </div>
+        <h2 id="android">Android phone or tablet using Chrome</h2>
+        <img src="/issues/pictures/android-150.png" width="150" height="177" alt="Android logo" class="floatRightIcon" />
+        <ol>
+        <li>Open the Google Chrome browser on your <a href="/jargon/a/android.htm">Android</a> phone or tablet.</li>
+        <li>Open the web page whose source code you want to view.</li>
+        <li><b>Tap once</b> in the <a href="/jargon/a/addrebar.htm">address bar</a> and move the cursor to the front of the <a href="/jargon/u/url.htm">URL</a>.</li>
+        <li>Type <b>view-source:</b> and tap <b>Enter</b> or <b>Go</b>.</li>
+        </ol>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>For example, to view the code for our homepage, you would type <b>view-source:https://www.computerhope.com</b>.</p>
+        </div>
+        <p class="tab">If the steps above don&#39;t work on your Android phone, use the method on the <a href="#ios">iPhone or iPad using Safari</a> section. The same code works on Android phones. The only differences are using Chrome instead of Safari and how a bookmark is created.</p>
+        <ul class="arrow noprint">
+        <li><a href="/issues/ch000858.htm">How to create an Internet favorite or bookmark.</a></li>
+        <li><a href="/issues/ch000859.htm">How to delete and organize Internet favorites and bookmarks.</a></li>
+        </ul>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>If you find it difficult to navigate the source code on your mobile device using the method above, you may also want to consider an <a href="#online">online tool</a>.</p>
+        </div>
+        <img src="/issues/pictures/apple-logo-2018-150.png" width="150" height="150" alt="iOS and iPadOS" class="floatRightIcon" />
+        <h2 id="ios">iPhone or iPad using Safari</h2>
+        <p class="tab">Viewing the source code of a web page on an <a href="/jargon/i/iphone.htm">iPhone</a> or <a href="/jargon/i/ipad.htm">iPad</a> takes a bit more work, but it is possible. The process requires you to create a bookmark, assign JavaScript code to it, and use the bookmark on a web page to view its source code.</p>
+        <div class="tip tab" role="note">
+        <span class="title note">Note</span>
+        <p>If you&#39;d prefer to use an app to view a web page&#39;s source code, you can download the free <b>View Source</b> app from the <a href="/jargon/a/app-store.htm">iOS App Store</a>.</p>
+        </div>
+        <h3 class="tab">Create a bookmark to view source code</h3>
+        <ol>
+        <li>Open the <a href="/jargon/s/safari.htm">Safari</a> browser on your iPhone or iPad.</li>
+        <li>Access any web page, such as <b>www.computerhope.com</b>.</li>
+        <li>Tap the <b>More</b> icon at the bottom of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-more-selector.png" width="252" height="51" alt="More selector in iOS." /></p>
+        <div class="tip dtab">
+        <span class="title">Tip</span>
+        <p>You can also press and hold your finger on the <b>Bookmark</b> icon at the bottom of the screen until a menu appears.</p>
+        </div>
+        <ol start="4">
+        <li>In the menu that opens, tap the <b>Add Bookmark</b> option.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-add-bookmark.png" width="340" height="317" alt="Option used to bring up the add bookmark screen in iOS." class="resize350" /></p>
+        <ol start="5">
+        <li>Tap the bookmark name field, tap the <b>x</b> on the right side to clear the current name, and enter &#34;<b>View web page source code</b>&#34; as the new name.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-viewsource-bookmark-name.png" width="313" height="220" alt="Change bookmark name" /></p>
+        <ol start="6">
+        <li>Tap <b>Save</b> in the top-right corner to save the bookmark.</li>
+        <li>Copy the entire JavaScript code snippet below.</li>
+        </ol>
+        <pre class="dtab"><span style="color:red">javascript:(function(){var a=window.open(&#39;about:blank&#39;).document;a.write(&#39;Source code of &#39;+location.href);a.close();var b=a.body.appendChild(a.createElement(&#39;pre&#39;));b.style.overflow=&#39;auto&#39;;b.style.whiteSpace=&#39;pre-wrap&#39;;b.appendChild(a.createTextNode(document.documentElement.innerHTML))})();</span></pre>
+        <ol start="8">
+        <li>In Safari, access the bookmarks by tapping the bookmarks icon at the bottom of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-access-bookmarks.png" width="396" height="72" alt="Bookmarks icon on iOS device" class="resize400" /></p>
+        <ol start="9">
+        <li>Find the bookmark you created above, then press and hold your finger on the bookmark until a menu opens at the bottom of the screen.</li>
+        <li>Tap the <b>Edit</b> option on the menu.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-edit-bookmark-option.png" width="294" height="228" alt="Edit bookmark option on an iOS device" /></p>
+        <ol start="11">
+        <li>On the <i>Edit Bookmark</i> screen, tap the URL, tap the <b>x</b> to clear the URL, and paste the JavaScript code from step 7 into the URL field.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-viewsource-bookmark-url.png" width="323" height="228" alt="Paste JavaScript code in URL field" /></p>
+        <ol start="12">
+        <li>Tap <b>Done</b> at the bottom-right of the screen to save the bookmark changes.</li>
+        </ol>
+        <h3 class="tab">Use a bookmark to view source code</h3>
+        <p class="tab">After you&#39;ve created the bookmark above, you can now view the source code for a web page.</p>
+        <ol>
+        <li>In Safari, access the web page where you want to view the source code.</li>
+        <li>Tap the bookmarks icon at the bottom of the screen.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-access-bookmarks.png" width="396" height="72" alt="Bookmarks icon on iOS device" class="resize400" /></p>
+        <ol start="3">
+        <li>Tap the <b>View web page source code</b> bookmark you created.</li>
+        </ol>
+        <p class="dtab"><img src="/issues/pictures/ios-viewsource-bookmark.png" width="313" height="195" alt="Use view source bookmark" /></p>
+        <p class="tab">A new Safari browsing tab opens, displaying the source code for the web page.</p>
+        <p class="dtab"><img src="/issues/pictures/ios-view-source.jpg" width="407" height="342" alt="Change bookmark name" class="resize400" /></p>
+        <div class="tip tab" role="note">
+        <span class="title">Tip</span>
+        <p>If you have difficulties navigating the source code on your mobile device using the above method, you may also consider using an <a href="#online">online tool</a>.</p>
+        </div>
+        <h2 id="close">How to close the source code page or tool</h2>
+        <p class="tab">Once you&#39;re done viewing the source code on a web page, you may want to exit or close it. Closing the source code depends on the method used to open it.</p>
+        <ul>
+        <li>If you&#39;ve used the <a href="/jargon/c/ctrl-u.htm"><kbd>Ctrl</kbd>+<kbd>U</kbd></a> method (except Edge) or the right-click method, <b>close the new tab that opened</b> at the top of your browser window.</li>
+        <li>If you&#39;ve used the developer method (using <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>), press those same keys again, or click the <img src="/issues/pictures/edge-remove-x.gif" width="30" height="30" alt="Edge remove x" class="vcicon" /> icon in the upper-right corner of the <b>tools window</b>.</li>
+        </ul>
+        <h2 id="online">Use an online tool to view the source code</h2>
+        <p class="tab">In addition to using a <a href="/jargon/b/browser.htm">browser</a>, several online tools allow you to view the source code of any web page. These tools may be helpful because most can format, stylize, and highlight the code to make it easier to read. Below is a short list of some tools.</p>
+        <ul>
+        <li><a href="https://www.view-page-source.com/" class="external">View page source</a></li>
+        <li><a href="https://codebeautify.org/source-code-viewer" class="external">Code Beautify source code viewer</a></li>
+        <li><a href="https://jsonformatter.org/html-viewer" class="external">HTML Viewer</a></li>
+        </ul>
+        <div class="relatedpages" role="navigation" aria-label="related">
+        <h2 id="related">Related information</h2>
+        <ul>
+        <li><a href="/issues/ch000745.htm">How to copy something from a web page to my web page.</a></li>
+        <li><a href="/issues/ch000068.htm">Is it possible to make the HTML source not viewable?</a></li>
+        <li><a href="/issues/ch000525.htm">Why am I unable to view a web page&#39;s source code?</a></li>
+        <li><a href="/issues/ch002254.htm">How to view JavaScript for a web page.</a></li>
+        <li><a href="/issues/ch002153.htm">How to open the developer tools in a browser.</a></li>
+        <li>See our <a href="/jargon/h/html-validator.htm">HTML validator</a> and <a href="/jargon/s/source.htm">source code</a> definition for further information.</li>
+        <li><a href="/htmlqa.htm">HTML and web design help and support.</a></li>
+        </ul>
+        </div>
+        </article>
+        <div class="bottomad" aria-hidden="true">
+        <span id="ezoic-pub-ad-placeholder-103"></span><span class="ezoic-ad ezoic-at-0 medrectangle-1 medrectangle-1103 adtester-container adtester-container-103 ezoic-ad-adaptive" data-ez-name="computerhope_com-medrectangle-1"><span class="ezoic-ad medrectangle-1 medrectangle-1-multi-103 adtester-container adtester-container-103" data-ez-name="computerhope_com-medrectangle-1"><span id="div-gpt-ad-computerhope_com-medrectangle-1-0" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:323px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[300,250],'computerhope_com-medrectangle-1','ezslot_2',103,'0','0'])};__ez_fad_position('div-gpt-ad-computerhope_com-medrectangle-1-0');</script></span></span><span class="ezoic-ad medrectangle-1 medrectangle-1-multi-103 adtester-container adtester-container-103" data-ez-name="computerhope_com-medrectangle-1"><span id="div-gpt-ad-computerhope_com-medrectangle-1-0_1" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:323px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[300,250],'computerhope_com-medrectangle-1','ezslot_3',103,'0','1'])};__ez_fad_position('div-gpt-ad-computerhope_com-medrectangle-1-0_1');</script></span></span><span class="ezoic-ad medrectangle-1 medrectangle-1-multi-103 adtester-container adtester-container-103" data-ez-name="computerhope_com-medrectangle-1"><span id="div-gpt-ad-computerhope_com-medrectangle-1-0_2" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:323px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[300,250],'computerhope_com-medrectangle-1','ezslot_4',103,'0','2'])};__ez_fad_position('div-gpt-ad-computerhope_com-medrectangle-1-0_2');</script></span></span><style> .medrectangle-1-multi-103{border:none !important;display:block !important;float:none !important;line-height:0px;margin-bottom:15px !important;margin-left:auto !important;margin-right:auto !important;margin-top:15px !important;max-width:100% !important;min-height:250px;min-width:300px;padding:0;text-align:center !important;}</style></span>
+        </div>
+        <aside><div id="meta_wrap" class="cf"><ul class="options cf"><li class="useful-page"><span class="nolink">Was this page useful?</span><a href="/cgi-bin/feedback.cgi?yes" rel="nofollow" class="first-child">Yes</a><a href="/cgi-bin/feedback.cgi?no" rel="nofollow">No</a></li><li><ul><li class="feedback"><a href="/feedback/" rel="nofollow" title="Give us your feedback about this page">Feedback</a></li><li class="email"><a href="/contact/" rel="nofollow" title="E-mail Computer Hope">E-mail</a></li><li class="share"><a href="/share/" rel="nofollow" title="Share this page with friends and social networks">Share</a></li><li class="first-child print"><a href="#" onclick="window.print();return false;" rel="nofollow" title="Print a copy of this page">Print</a></li></ul></li></ul></div></aside>
+        </div>
+        <footer><div class="fcontain"><form action="https://www.computerhope.com/cgi-bin/search.cgi" role="search" method="post" class="cf"><input class="sbar" name="q" aria-label="search" type="text" /><button type="Submit">Search</button></form><div role="navigation" aria-label="footer"><ul class="cf"><li class="recent-pages"><ol><li class="ftitle">Recently added pages</li><li id="ra1"></li><li id="ra2"></li><li id="ra3"></li><li id="ra4"></li><li id="ra5"></li><li><a href="/whatnew.htm">View all recent updates</a></li></ol></li><li class="useful-links"><ol><li class="ftitle">Useful links</li><li><a href="/more.htm">About Computer Hope</a></li><li><a href="/sindex.htm">Site Map</a></li><li><a href="/forum/">Forum</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/issues/ch000586.htm">How to Help</a></li><li><a href="/chtop10.htm">Top 10 pages</a></li></ol></li><li class="social-networks"><ol><li class="ftitle">Follow us</li><li><a href="https://www.facebook.com/computerhope/" class="facebook">Facebook</a></li><li><a href="https://twitter.com/computerhope/" class="twitter">Twitter</a></li><li><a href="https://www.pinterest.com/computerhope/" class="pinterest">Pinterest</a></li><li><a href="https://www.youtube.com/user/Computerhope/" class="youtube">YouTube</a></li><li><a href="/rss.htm" class="rss">RSS</a></li></ol></li></ul></div><div class="copyright"><a href="/"><span class="blogo" title="Computer Hope home page" aria-hidden="true"></span><span class="sr">Computer Hope home page</span></a>© 2023 Computer Hope<br /><a href="/legal.htm" class="legal">Legal Disclaimer - Privacy Statement</a></div></div></footer>
+        </div>
+        <script async="" src="https://www.computerhope.com/ch.js"></script>
+        <div id="tt" aria-hidden="true"></div>
+        <div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span id="ezoic-pub-ad-placeholder-100"></span><div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span class="ezoic-ad ezoic-at-4 medrectangle-2 medrectangle-2100 adtester-container adtester-container-100" data-ez-name="computerhope_com-medrectangle-2"><span id="div-gpt-ad-computerhope_com-medrectangle-2-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:90px;min-width:728px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[728,90],'computerhope_com-medrectangle-2','ezslot_0',100,'0','0'])};__ez_fad_position('div-gpt-ad-computerhope_com-medrectangle-2-0');</script></span></span></center><span class="ezmob-footer-close" id="ezmob-footer-close" onclick="__ez_close_anchor()" style="display: none;">x</span></div></center></div><script async src="https://g.ezodn.com/cmp/v2/v.js?v=4"></script><script>(function(){var attachEvent=function(element,evt,func){if(element.addEventListener){element.addEventListener(evt,func,false);}else{element.attachEvent("on"+evt,func);}};attachEvent(document.body,"ezVigImpression",function(e){if(typeof(_ezaq)!=="undefined"&&typeof e==="object"){__ez.pel.AddAndFire(e.slot,[(new __ezDotData(e.key,e.value))]);}});})();</script><script>window.__ez_vig_close_wrapper=function(closeFunc,urlAddition){closeFunc();var vc={"enabled":false,"useVignetteLoader":true,"fireEventName":"ezVigImpression","impressionSource":"anchor","urlAddition":"utm_content=anc-true","disableFloor":true,"eventHandlerTest":false};if(typeof urlAddition=='string'){vc.urlAddition=urlAddition;}
+        var v=newEzVignette(vc);v.handleClick();};</script>
+        <script>function __ez_fad_ezpbinit(){var s = document.createElement( 'script' );
+            s.setAttribute( 'src', '//go.ezodn.com/hb/dall.js?cb=195-0-55' );
+            s.onerror = function () {window.ezDallErr = true};
+            document.body.appendChild( s );}__ez.queue.addFile('/detroitchicago/kenai.js', '/detroitchicago/kenai.js?gcb=0&cb=5', false, [], true, false, true, false);var ezAdtelligent={bidder:'adtelligent',params:{"aid":"678634"}};var ezCriteo={bidder:'criteo',params:{networkId:'7987'}};var ezYieldmo={bidder:'yieldmo',params:{placementId:'2834942196124164132'}};var ezjsps=function(obj){return JSON.parse(JSON.stringify(obj));};var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2000;epbjs.useAdj=true;epbjs.SS={"adagio":11328,"adpone":11312,"adtelligent":11316,"conversant":10033,"criteo":10050,"onemobile":11293,"pubmatic":10061,"rubicon":10063,"sharethrough":11309,"yieldmo":11315};epbjs.bidders=['adagio','adpone','adtelligent','conversant','criteo','onemobile','pubmatic','rubicon','sharethrough','yieldmo'];epbjs.que.push(function(){epbjs.aliasBidder('appnexus', 'conversant');});epbjs.bidderSettings={};epbjs.gadj=1.000000;var __enableAnalytics=false;epbjs.testFeatures=[''];
+        var __s2sbidders=[];
+        var __s2sinstreambidders=[];
+        var __allBidders=['adpone','onemobile','adagio','rubicon','sharethrough','adtelligent','criteo','yieldmo','conversant','pubmatic'];
+        __ez.queue.addFile('/detroitchicago/houston.js', '/detroitchicago/houston.js?gcb=0&cb=73', true, [], true, false, true, false);__ez.queue.addFunc("epbjsRequestAdUnits", "epbjsRequestAdUnits", [[{code: 'div-gpt-ad-computerhope_com-medrectangle-2-0', mediaTypes: {banner: { sizes:[[728,90]] }}, bids: [{bidder: 'adpone', params: { placementId: '123011154341318' }},{bidder: 'onemobile', params:{ dcn: '8a9691b20174742046e2210bface012a', pos: '8a9699b701747420431021125b3b0010' }},{bidder: 'adagio', params: { organizationId: '1223', site: 'computerhope-com', adUnitElementId: 'div-gpt-ad-computerhope_com-medrectangle-2-0', placement: 'medrectangle-2', environment: 'desktop' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder:'sharethrough',params:{pkey:'e1sI5HKO9lbvTm6UAa1WEpg9'}},ezjsps(ezAdtelligent),ezjsps(ezCriteo),ezjsps(ezYieldmo),{bidder: 'conversant', params: { site_id: '222935', secure: 1 }},{bidder: 'pubmatic', params:{ publisherId: '156983', adSlot: 'e_bottom_floating_728x90' }}] },{code: 'div-gpt-ad-computerhope_com-medrectangle-1-0', mediaTypes: {banner: { sizes:[[300,250]] }}, bids: [{bidder: 'adpone', params: { placementId: '12301115433175' }},{bidder: 'onemobile', params:{ dcn: '8a9691b20174742046e2210bface012a', pos: '8a9691b20174742046e2211258fd01b2' }},{bidder: 'adagio', params: { organizationId: '1223', site: 'computerhope-com', adUnitElementId: 'div-gpt-ad-computerhope_com-medrectangle-1-0', placement: 'medrectangle-1', environment: 'desktop' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}},ezjsps(ezAdtelligent),ezjsps(ezCriteo),ezjsps(ezYieldmo),{bidder: 'conversant', params: { site_id: '222935', secure: 1 }},{bidder: 'pubmatic', params:{ publisherId: '156983', adSlot: 'e_bottom_of_page_300x250' }}] ,sizeMapping: [
+                    {
+                        minWidth: 300,
+                        sizes: [[300,250]]
+                    }]},{code: 'div-gpt-ad-computerhope_com-medrectangle-1-0_1', mediaTypes: {banner: { sizes:[[300,250]] }}, bids: [{bidder: 'adpone', params: { placementId: '12301115433175' }},{bidder: 'onemobile', params:{ dcn: '8a9691b20174742046e2210bface012a', pos: '8a9691b20174742046e2211258fd01b2' }},{bidder: 'adagio', params: { organizationId: '1223', site: 'computerhope-com', adUnitElementId: 'div-gpt-ad-computerhope_com-medrectangle-1-0_1', placement: 'medrectangle-1', environment: 'desktop' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}},ezjsps(ezAdtelligent),ezjsps(ezCriteo),ezjsps(ezYieldmo),{bidder: 'conversant', params: { site_id: '222935', secure: 1 }},{bidder: 'pubmatic', params:{ publisherId: '156983', adSlot: 'e_bottom_of_page_300x250' }}] ,sizeMapping: [
+                    {
+                        minWidth: 300,
+                        sizes: [[300,250]]
+                    }]},{code: 'div-gpt-ad-computerhope_com-medrectangle-1-0_2', mediaTypes: {banner: { sizes:[[300,250]] }}, bids: [{bidder: 'adpone', params: { placementId: '12301115433175' }},{bidder: 'onemobile', params:{ dcn: '8a9691b20174742046e2210bface012a', pos: '8a9691b20174742046e2211258fd01b2' }},{bidder: 'adagio', params: { organizationId: '1223', site: 'computerhope-com', adUnitElementId: 'div-gpt-ad-computerhope_com-medrectangle-1-0_2', placement: 'medrectangle-1', environment: 'desktop' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}},ezjsps(ezAdtelligent),ezjsps(ezCriteo),ezjsps(ezYieldmo),{bidder: 'conversant', params: { site_id: '222935', secure: 1 }},{bidder: 'pubmatic', params:{ publisherId: '156983', adSlot: 'e_bottom_of_page_300x250' }}] ,sizeMapping: [
+                    {
+                        minWidth: 300,
+                        sizes: [[300,250]]
+                    }]}]], false, ['/detroitchicago/houston.js'], true, true, true, true);var ez__id5pd = 'MTA9MjQ1LjM1LjkxLjE4NCYxMj1Nb3ppbGxhJTJGNS4wKyUyOE1hY2ludG9zaCUzQitJbnRlbCtNYWMrT1MrWCsxMF8xNV83JTI5K0FwcGxlV2ViS2l0JTJGNTM3LjM2KyUyOEtIVE1MJTJDK2xpa2UrR2Vja28lMjkrQ2hyb21lJTJGMTExLjAuMC4wK1NhZmFyaSUyRjUzNy4zNg==';var ez__uIdHash = '3bed710f76a4116f6fa2dc35dbe4e1219a737675e63532aa75a2dc6e26db45bd';var ez__sspDomain = 'www.computerhope.com';</script>
+        <script>var __ez_tkn_evnt = function() { if(typeof(_ezaq) != 'undefined'){if(typeof window.ezogtk !== "undefined" && window.ezogtk !== "") {__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("ext_user_hash",window.ezogtk)]);}}};document.addEventListener("DOMContentLoaded", __ez.queue.addFunc("__ez_tkn_evnt", "__ez_tkn_evnt", event, false, ['/detroitchicago/minneapolis.js','/detroitchicago/memphis.js'], true, true, false, true));</script>
+        <script async data-ezscrex="false">__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_load(0,0);__ez.fads.__ez_fad_scrollmon();});</script>
+        <script type="text/javascript" data-cfasync="false"></script>
+        <script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+                var setCookie = function( name, content, expiry ) {
+                    return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+                };
+                var ffid = 1;
+                var oh = window.screen.height;
+                var ow = window.screen.width;
+                var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+                var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+                var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+                var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+                setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+            })();</script><script type='text/javascript' style='display:none;' async>
+        </script>
+        </body></html>
